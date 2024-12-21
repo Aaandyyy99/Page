@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="pageCSS.css">
+</head>
+<body>
+	<div class="wrapper">
+  <div class="box1">
+    <h1>Topic</h1>
+    <h2>How AI executes long-term care services for the elderly.</h2>
+    <h2>AI如何應用於老年人的長期照護服務</h2>
+  </div>
+  <a class="box2" href="#" id="b1">Introducton</a>
+  <a class="box3" href="#" id="b2">Challenges1</a>
+  <a class="box4" href="#" id="b3">Challenges2</a>
+  <a class="box5" href="#" id="b4">Solutions</a>
+  <a class="box6" href="#" id="b5">Future</a>
+  <div class="box7" id="content"></div>
+  <script type="text/javascript">
+  	function start() {
+  		var btn1 = document.getElementById('b1');
+  		btn1.addEventListener("click",addIntro);
+        var btn2 = document.getElementById('b2');
+        btn2.addEventListener("click",addCh1);
+        var btn3 = document.getElementById('b3');
+        btn3.addEventListener("click",addCh2);
+        var btn4 = document.getElementById('b4');
+        btn4.addEventListener("click",addSol);
+        var btn5 = document.getElementById('b5');
+        btn5.addEventListener("click",addFu);
+  	}
+  	function addIntro() {
+  		document.getElementById("content").innerHTML = "<h2>台灣正面臨高齡化社會的挑戰，因而有關老人安養及長期照護的議題越來越受到重視。</br>然而，在照顧者人力不足以及長者追求更高品質老年生活的情況下，</br>促使人們開始思考是否能將AI應用於長期照護中。 目前，智能手錶無疑是最具代表性的裝置之一，</br>不僅能夠偵測心跳和記錄步數，近年來更加入了跌倒及血氧偵測功能，幫助人們更有效地追蹤健康狀況。</br>然而，如何進一步提升偵測的準確性，仍是一大挑戰。</h2>";
+  	}
+    function addCh1(){
+        document.getElementById("content").innerHTML = "<h1>血氧偵測 : </h1><p><h2>血氧監測功能，透過紅色光線的LED與紅外線，穿過皮膚照在手腕上的血管上，</br>以血液顏色測量，來計算血液的微量體積變化，</br>進而判斷血氧濃度的約略值。這個數值被稱為血氧飽和度，用於衡量血液中能夠攜帶氧氣的紅血球的比例。</br>血氧飽和度正常值:  95%~100%</br>SpO2 指的是周邊微血管的血氧飽和度，利用「氧合血紅素」與「血紅素」吸光值不同，</br>用波長 660nm 和波長 940nm 的光所測到的數據</br>SpO2 = 氧合血紅素 / (氧合血紅素 + 還原血紅素)</h2></p><p><h2>若偵測到血氧飽和度小於95%，智能手錶將發出警示並聯絡緊急聯絡人，</br>再利用AI數據列出血氧過低可能造成之影響以及相關資訊傳輸給緊急聯絡人，</br>使長者的健康問題能被及早發現，並盡速做出應對措施。</h2></p><p><h2>血氧手錶的準確度會依據穿戴時的鬆緊度、位置、皮膚顏色與毛髮而有所影響。</br>血氧飽和度是健康與許多疾病（例如心臟疾病和呼吸道疾病）的重要指標。</br>然而，智能手錶血氧測量功能不是醫療設備，它不能診斷疾病，而僅僅提供一種參考數據，</br>讓長者家人能對長者的健康狀態有所掌握，隨時做好準備，並視情況決定是否就醫。</h2></p>";
+    }
+    function addCh2(){
+        document.getElementById("content").innerHTML = "<h1>跌倒偵測 : </h1><p><h2>運作原理：核心為其內建的加速感測器及陀螺儀，去分析手腕的移動軌跡及衝擊加速度，</br>以判斷使用者是否跌倒。若偵測到跌倒狀況，手錶會發出警示音，並跳出回報現況的畫面，</br>錶面有「聯絡緊急服務」的選項，或是可以點下「我沒事」關閉畫面。</br>若超過1分鐘沒有反應，Apple Watch將自動撥打緊急電話119，同時通知設定的緊急聯絡人。</h2></p><p><h2>現今智能手錶跌倒偵測已經能夠搜集每次跌倒的數據經由AI演算，偵測使用者是否真的跌倒。</br>但此功能僅限於「偵測」是否跌倒，意即它無法預判跌倒，</br>雖能及時傳出求救訊號，但目前仍無法預判跌倒發生的可能，不能提供及時幫助。</h2></p>";
+    }
+    function addSol(){
+        document.getElementById("content").innerHTML = "<h2><p>除了以感應器去偵測跌倒之外，可以透過聲音及影像的結合，去做跌倒的「預防」，</br>例如運用環場式攝影機分析使用者周遭地形，或是利用毫米波雷達去分析使用者周遭地形，</br>蒐集容易跌倒的地形及場地之數據、當下天氣濕度之數據、以及使用者身體各項數據（例如：血壓、心跳、血氧），</br>結合AI分析當下可能跌倒的機率，設定超過一定的機率時，須對使用者提出警訊（例如：震動、訊息彈出），</br>以降低使用者跌倒的風險、減少傷害的發生。</p></h2";
+    }
+    function addFu(){
+        document.getElementById("content").innerHTML = "<h2><p>未來，除了將AI應用於生命監測，還可以賦予AI陪伴功能。</br>在原本的智能手錶中加入語言處理及情感識別技術，使其能夠與老年人進行對話，滿足其情感需求。</br>將AI的回復內容及風格設定為孫子女的角色，提醒年長者按時服藥和定期運動，且能陪伴他們玩小遊戲，</br>進而促進年長者的記憶力。此系統還可以根據需求客製化語速，讓其更加貼合長者的使用習慣。</br>此外，當長者向AI傾訴，例如提到身體某處不適或表達思念子女時，</br>AI能即時將這些訊息傳送至子女的手機，方便子女了解並關心父母的狀況。</br>另外，讓AI模型常常關心及對年長者示愛，使其感受到自己被需要。</br>這些不僅能減輕年長者的孤獨感，還能有效降低老年憂鬱症的發生機率。</p></h2>";
+    }
+    
+  	window.addEventListener("load",start);
+  </script>
+</div>
+</body>
+</html>
